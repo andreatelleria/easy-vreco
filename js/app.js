@@ -1,5 +1,4 @@
 var latitude, longitude;
-
 document.getElementById('findMe').addEventListener('click', search);
 
 /* Función que carga Google Maps y nos ubica en Lima por default */
@@ -14,7 +13,11 @@ function initMap() {
   });
   var marker = new google.maps.Marker({
     position: location,
-    map: map
+    map: map,
+    animation: google.maps.Animation.DROP,
+		draggable: true,
+		icon : 'https://cicloslasalud.com/img/bici.png'
+
   });
 
   var inputPartida = document.getElementById('startingPoint');
@@ -46,6 +49,13 @@ function initMap() {
     calculateAndDisplayRoute(directionsService, directionsDisplay);
   };
   document.getElementById('goTo').addEventListener('click', directions);
+  /*Creando función que limpia los inputs y permite realizar más búsquedas*/
+  document.getElementById('goTo').addEventListener('click', function(){
+    if(directions) {
+      inputPartida.value = '';
+      inputDestino.value = '';
+    }
+  });
 };
 
 /* Función si se encontró la ubicación exitosamente */
@@ -69,7 +79,10 @@ var success = function getLocationSuccess(position) {
   });
   var marker = new google.maps.Marker({
     position: location,
-    map: map
+    map: map,
+    animation: google.maps.Animation.DROP,
+		draggable: true,
+		icon : 'https://cicloslasalud.com/img/bici.png'
   });
 };
 
