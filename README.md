@@ -9,7 +9,7 @@
 
 ## Objetivo:
 
-- Aprender sobre el uso de la API 'Geolocation'.
+- Aprender sobre el uso de la API de 'Geolocation'.
 
 ***
 
@@ -24,7 +24,9 @@
 
 - Crear una página web responsive, con un maquetado apto para la ejecución de la API.
 - Incorporar un mapa en la página web.
-- La web deberá tener dos botones y dos inputs: El primero, será para localizar al usuario; y al darle click, deberá mostrar en el mapa su lugar de ubicación. Los inputs, tendrán que marcar dos puntos distintos. Y al hacer click en el segundo botón, éste deberá trazar una ruta con los datos que los inputs.
+- La web deberá contar con dos botones y dos inputs:
+  * El primero, será para localizar al usuario; y al darle click, deberá mostrar en el mapa su lugar de ubicación. 
+  * El segundo botón, éste deberá trazar una ruta con los datos que  el usuario ingreso en los inputs.
 - Autocompletado de inputs.
 
 ## Extra:
@@ -37,10 +39,24 @@
 
 ![Sin titulo](assets/images/screenshot.png)
 
-## Herramientas usadas:
+## Vista Mobile:
+![Sin titulo](assets/images/capture.PNG)
+## Distribucción de trabajo:
 
++ Andrea busqueda de la API.
++ Jossy enmaquetado y funcionabilidad.
++ Yolanda cambio de es5 a es6.
+* Constante comunicación en el grupo.
+* Trabajando y siempre buscando la mejora del producto.
+
+## Herramientas usadas:
+- Sistema grillas.
 - Bootstrap (Framework css).
-- Javascript.
-- Geolocation.
+- Javascript 6.
+- API de Geolocation.
 - CSS3.
 - HTML5.
+* **Integrantes:** 
++ Andrea Telleria.
++ Yosseline Apcho.
++ Yolanda Ventura.
