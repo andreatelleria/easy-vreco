@@ -59,7 +59,7 @@ function initMap() {
 };
 
 /* Función para iniciar búsqueda */
-const search = () => {
+function search(){
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(success, error);
   }
