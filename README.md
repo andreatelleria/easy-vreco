@@ -33,6 +33,10 @@
 
 ***
 
+## Vista Desktop:
+
+![Sin titulo](assets/images/screenshot.jpg)
+
 ## Herramientas usadas:
 
 - Bootstrap (Framework css).

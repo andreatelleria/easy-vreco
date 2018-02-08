@@ -15,8 +15,8 @@ function initMap() {
     position: location,
     map: map,
     animation: google.maps.Animation.DROP,
-		draggable: true,
-		icon : 'https://cicloslasalud.com/img/bici.png'
+    draggable: true,
+    icon: 'https://cicloslasalud.com/img/bici.png'
 
   });
 
@@ -49,16 +49,16 @@ function initMap() {
     calculateAndDisplayRoute(directionsService, directionsDisplay);
   };
   document.getElementById('goTo').addEventListener('click', directions);
-  /*Creando función que limpia los inputs y permite realizar más búsquedas*/
-  document.getElementById('goTo').addEventListener('click', function(){
-    if(directions) {
+  /* Creando función que limpia los inputs y permite realizar más búsquedas */
+  document.getElementById('goTo').addEventListener('click', function () {
+    if (directions) {
       inputPartida.value = '';
       inputDestino.value = '';
     }
   });
 };
 
-/* Función si se encontró la ubicación exitosamente */
+/* Función para iniciar búsqueda */
 function search() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(success, error);
@@ -81,8 +81,8 @@ var success = function getLocationSuccess(position) {
     position: location,
     map: map,
     animation: google.maps.Animation.DROP,
-		draggable: true,
-		icon : 'https://cicloslasalud.com/img/bici.png'
+    draggable: true,
+    icon: 'https://cicloslasalud.com/img/bici.png'
   });
 };
 

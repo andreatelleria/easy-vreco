@@ -1,6 +1,7 @@
-.margin-left-10{
+.margin-left-10 {
   margin-left: 10vw;
 }
+
 .header {
   width: 100%;
   background-color: #ea4335;
@@ -55,11 +56,12 @@
 .btn:hover {
   background-color: #E2E2E2;
 }
+
 @media (min-width: 768px) {
   .input-box {
     margin-bottom: 0;
   }
-  .margin-left-10{
+  .margin-left-10 {
     margin-left: 0;
   }
 }
