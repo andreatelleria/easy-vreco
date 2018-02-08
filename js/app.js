@@ -1,17 +1,17 @@
-var latitude, longitude;
+let latitude, longitude;
 document.getElementById('findMe').addEventListener('click', search);
 
 /* Función que carga Google Maps y nos ubica en Lima por default */
 function initMap() {
-  var location = {
+  let location = {
     lat: -12.0431800,
     lng: -77.0282400
   };
-  var map = new google.maps.Map(document.getElementById('map'), {
+  let map = new google.maps.Map(document.getElementById('map'), {
     zoom: 15,
     center: location
   });
-  var marker = new google.maps.Marker({
+  const marker = new google.maps.Marker({
     position: location,
     map: map,
     animation: google.maps.Animation.DROP,
@@ -20,16 +20,16 @@ function initMap() {
 
   });
 
-  var inputPartida = document.getElementById('startingPoint');
-  var inputDestino = document.getElementById('destination');
+  let inputPartida = document.getElementById('startingPoint');
+  let inputDestino = document.getElementById('destination');
 
   new google.maps.places.Autocomplete(inputPartida);
   new google.maps.places.Autocomplete(inputDestino);
 
-  var directionsService = new google.maps.DirectionsService;
-  var directionsDisplay = new google.maps.DirectionsRenderer;
+  const directionsService = new google.maps.DirectionsService;
+  const directionsDisplay = new google.maps.DirectionsRenderer;
 
-  var calculateAndDisplayRoute = function (directionsService, directionsDisplay) {
+  const calculateAndDisplayRoute = function (directionsService, directionsDisplay) {
     directionsService.route({
       origin: inputPartida.value,
       destination: inputDestino.value,
@@ -45,7 +45,7 @@ function initMap() {
 
   /* Función para trazar ruta según direcciones ingresadas */
   directionsDisplay.setMap(map);
-  var directions = function () {
+  const directions = () => {
     calculateAndDisplayRoute(directionsService, directionsDisplay);
   };
   document.getElementById('goTo').addEventListener('click', directions);
@@ -59,25 +59,25 @@ function initMap() {
 };
 
 /* Función para iniciar búsqueda */
-function search() {
+const search = () => {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(success, error);
   }
 }
 
 /* Función si se encontró la ubicación exitosamente */
-var success = function getLocationSuccess(position) {
+const success = function getLocationSuccess(position) {
   latitude = position.coords.latitude;
   longitude = position.coords.longitude;
-  var location = {
+  let location = {
     lat: latitude,
     lng: longitude
   };
-  var map = new google.maps.Map(document.getElementById('map'), {
+  let map = new google.maps.Map(document.getElementById('map'), {
     zoom: 17,
     center: location
   });
-  var marker = new google.maps.Marker({
+  let marker = new google.maps.Marker({
     position: location,
     map: map,
     animation: google.maps.Animation.DROP,
@@ -87,6 +87,6 @@ var success = function getLocationSuccess(position) {
 };
 
 /* Función si hubo un error al intentar encontar la ubicación */
-var error = function (error) {
+const error = (error) => {
   alert('Tenemos problemas para encontrar tu ubicación.');
 };
