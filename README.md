@@ -35,7 +35,7 @@
 
 ## Vista Desktop:
 
-![Sin titulo](assets/images/screenshot.jpg)
+![Sin titulo](assets/images/screenshot.png)
 
 ## Herramientas usadas:
 
