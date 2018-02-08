@@ -40,6 +40,7 @@
 ![Sin titulo](assets/images/screenshot.png)
 
 ## Vista Mobile:
+
 ![Sin titulo](assets/images/capture.png)
 
 ## Distribucción de trabajo:
